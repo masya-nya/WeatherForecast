@@ -1,0 +1,21 @@
+{
+  "name": "weather-practice",
+  "version": "0.0.1",
+  "description": "page showing weather forecast for RND",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "js",
+    "rnd"
+  ],
+  "author": "Maxim Zudin",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.8.0",
+    "vue": "^3.2.36",
+    "vue-chartjs": "^4.1.1"
+  }
+}

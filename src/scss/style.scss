@@ -1,0 +1,145 @@
+/* ОБНУЛЯЮЩИЙ ФАЙЛ */
+@import "zero.scss";
+/*--------------------------------------------*/
+/* ШРИФТЫ IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*--------------------------------------------*/
+/* ШРИФТЫ */
+/*--------------------------------------------*/
+/* ПЕРЕМЕННЫЕ */
+/*--------------------------------------------*/
+/* ШАБЛОНЫ */
+/*--------------------------------------------*/
+/* МИКСИНЫ */
+/*--------------------------------------------*/
+/* SCSS */
+
+body {
+    background-color: #FFFAFA;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.info {
+    color: #48484a;
+    padding: 50px 0 0 0;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    & >:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+    & .one-day-forecast {
+        border-left: 1px solid #FF8C00;
+        padding: 0 0 0 10px;
+        &__date {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #FF8C00;
+        }
+        &__city {
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+        &__temp {
+            display: flex;
+            flex-direction: column;
+            font-size: 38px;
+            &-base {
+                display: flex;
+                align-items: center;
+            }
+            &-add {
+                font-size: 14px;
+                margin: 5px 0 0 0;
+                font-weight: 700;
+            }
+        }
+    }
+    & .three-days-forecast {
+        border-left: 1px solid #FF8C00;
+        padding: 0 0 0 10px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        &__title {
+            font-weight: 700;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+        &__avg {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        &-body {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            &__date {
+                font-size: 16px;
+            }
+            &__temp {
+                font-size: 18px;
+            }
+            &__description {
+                font-size: 14px;
+                align-items: flex-end;
+            }
+            &-temp {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    & .chart {
+        max-width: 700px;
+        font-size: 80px;
+    }
+    & button {
+        max-width: 200px;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
+}
+.card {
+    margin: 150px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 50px 100px;
+    & > :not(:last-child) {
+        margin: 0 0 15px 0;
+    }
+    & .btn {
+        max-width: 150px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+    & .form-control input {
+        border: 1px solid #000;
+        width: 500px;
+        height: 25px;
+        border-radius: 7px;
+        padding: 10px 15px;
+    }
+}
+
+
+/*--------------------------------------------*/
+/* KEYFRAMES */
+/*--------------------------------------------*/

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/css/style.css">
+  <title>Погода РНД</title>
+</head>
+<body>
+    <div class="container">
+        <div class="info" id="info">
+            <div class="one-day-forecast">
+                <div class="one-day-forecast__date"> {{ date }}, {{ time }}</div>
+                <div class="one-day-forecast__city">Ростов-на-Дону</div>
+                <div class="one-day-forecast__temp">
+                    <div class="one-day-forecast__temp-base">
+                        <img v-bind:src="srcImageDateOne" alt="img">
+                        <p>{{ tempDayOne }}&#176;C</p>
+                    </div>
+                    <div class="one-day-forecast__temp-add">
+                        <p>Ощущается как {{ feelsLikeDayOne }}&#176;C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="three-days-forecast">
+                <p class="three-days-forecast__title">Прогноз погоды на 3 дня</p>
+                <p class="three-days-forecast__avg">Средняя погода на 3 дня: {{ averageTemp }}&#176;C</p>
+                <div class="three-days-forecast-body">
+                    <div class="three-days-forecast__item three-days-forecast__item__date">
+                        <div class="three-days-forecast__item-date">
+                            {{ dateDayOne }}
+                        </div>
+                        <div class="three-days-forecast__item-date">
+                            {{ dateDayTwo }}
+                        </div>
+                        <div class="three-days-forecast__item-date">
+                            {{ dateDayThree }}
+                        </div>
+                    </div>
+                    <div class="three-days-forecast__item three-days-forecast__item__temp">
+                        <div class="three-days-forecast__item-temp">
+                            <img v-bind:src="srcImageDateOne" alt="img" class="day1-img">
+                            <p>{{ tempDayOne }} / {{ tempNightDayOne }}&#176;C</p>
+                        </div>
+                        <div class="three-days-forecast__item-temp">
+                            <img v-bind:src="srcImageDateTwo" alt="img" class="day1-img">
+                            <p>{{ tempDayTwo }} / {{ tempNightDayTwo }}&#176;C</p>
+                        </div>
+                        <div class="three-days-forecast__item-temp">
+                            <img v-bind:src="srcImageDateThree" alt="img" class="day1-img">
+                            <p>{{ tempDayThree }} / {{ tempNightDayThree }}&#176;C</p>
+                        </div>
+                    </div>
+                    <div class="three-days-forecast__item three-days-forecast__item__description">
+                        <div class="three-days-forecast__item-description">
+                            {{ descriptionDayOne }}
+                        </div>
+                        <div class="three-days-forecast__item-description">
+                            {{ descriptionDayTwo }}
+                        </div>
+                        <div class="three-days-forecast__item-description">
+                            {{ descriptionDayThree }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="myChart" width="300" height="200"></canvas>
+            </div>
+            <!--<button v-on:click="changeData" class="refresh__button">Refresh</button>-->
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!--
+    Задание: требуется сделать страницу отображения температуры в данный момент, 
+средней температуры и типа погоды (иконки погоды) на следующие 3 дня в Ростове-на-Дону, 
+а так же построить график температуры за последние несколько дней используя 
+данные API OpenWeatherMap.
+    Реализовать задачу желательно на Vue.js. (если умеете/постараетесь научиться)
+Верстка должна быть адаптивной, внешний вид на своё усмотрение. 
+Данные на открытой странице должны обновляться каждую минуту. 
+-->

@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* ОБНУЛЯЮЩИЙ ФАЙЛ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------------------------------*/
+/* ШРИФТЫ IMPORT */
+/*--------------------------------------------*/
+/* ШРИФТЫ */
+/*--------------------------------------------*/
+/* ПЕРЕМЕННЫЕ */
+/*--------------------------------------------*/
+/* ШАБЛОНЫ */
+/*--------------------------------------------*/
+/* МИКСИНЫ */
+/*--------------------------------------------*/
+/* SCSS */
+body {
+  background-color: #FFFAFA;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info {
+  color: #48484a;
+  padding: 50px 0 0 0;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.info > :not(:last-child) {
+  margin: 0 0 30px 0;
+}
+.info .one-day-forecast {
+  border-left: 1px solid #FF8C00;
+  padding: 0 0 0 10px;
+}
+.info .one-day-forecast__date {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #FF8C00;
+}
+.info .one-day-forecast__city {
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+.info .one-day-forecast__temp {
+  display: flex;
+  flex-direction: column;
+  font-size: 38px;
+}
+.info .one-day-forecast__temp-base {
+  display: flex;
+  align-items: center;
+}
+.info .one-day-forecast__temp-add {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  font-weight: 700;
+}
+.info .three-days-forecast {
+  border-left: 1px solid #FF8C00;
+  padding: 0 0 0 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.info .three-days-forecast__title {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+.info .three-days-forecast__avg {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+.info .three-days-forecast-body {
+  display: flex;
+  justify-content: space-between;
+}
+.info .three-days-forecast__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.info .three-days-forecast__item__date {
+  font-size: 16px;
+}
+.info .three-days-forecast__item__temp {
+  font-size: 18px;
+}
+.info .three-days-forecast__item__description {
+  font-size: 14px;
+  align-items: flex-end;
+}
+.info .three-days-forecast__item-temp {
+  display: flex;
+  align-items: center;
+}
+.info .chart {
+  max-width: 700px;
+  font-size: 80px;
+}
+.info button {
+  max-width: 200px;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.card {
+  margin: 150px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 50px 100px;
+}
+.card > :not(:last-child) {
+  margin: 0 0 15px 0;
+}
+.card .btn {
+  max-width: 150px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.card .btn:hover {
+  background-color: #ccc;
+}
+.card .form-control input {
+  border: 1px solid #000;
+  width: 500px;
+  height: 25px;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
+/*--------------------------------------------*/
+/* KEYFRAMES */
+/*--------------------------------------------*/
