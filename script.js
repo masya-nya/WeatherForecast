@@ -84,25 +84,26 @@ async function refresh() {
                     "thunderstorm": '11d.png',
                     "snow": '13d.png',
                 }
-                this.averageTemp = `${((data[0].temp.day + data[1].temp.day + data[2].temp.day) / 3).toFixed(0)}`;
+                this.averageTemp = `${((data[1].temp.day + data[2].temp.day + data[3].temp.day) / 3).toFixed(0)}`;
                 this.date = new Date().toLocaleDateString();
                 this.time = new Date().toLocaleTimeString();
                 this.feelsLikeDayOne = data[0].feels_like.day.toFixed(0);
-                this.dateDayOne = `${getTime(data[0].dt).substr(0, 5)}`;
-                this.dateDayTwo = `${getTime(data[1].dt).substr(0, 5)}`;
-                this.dateDayThree = `${getTime(data[2].dt).substr(0, 5)}`;
-                this.tempDayOne = data[0].temp.day.toFixed(0);
-                this.tempDayTwo = data[1].temp.day.toFixed(0);
-                this.tempDayThree = data[2].temp.day.toFixed(0);
-                this.tempNightDayOne = data[0].temp.night.toFixed(0);
-                this.tempNightDayTwo = data[1].temp.night.toFixed(0);
-                this.tempNightDayThree = data[2].temp.night.toFixed(0);
-                this.descriptionDayOne = data[0].weather[0].description;
-                this.descriptionDayTwo = data[1].weather[0].description;
-                this.descriptionDayThree = data[2].weather[0].description;
-                this.srcImageDateOne = `http://openweathermap.org/img/wn/${types[(data[0].weather[0].main).toLowerCase()]}`;
-                this.srcImageDateTwo = `http://openweathermap.org/img/wn/${types[(data[1].weather[0].main).toLowerCase()]}`;
-                this.srcImageDateThree = `http://openweathermap.org/img/wn/${types[(data[2].weather[0].main).toLowerCase()]}`;
+                this.dateDayOne = `${getTime(data[1].dt).substr(0, 5)}`;
+                this.dateDayTwo = `${getTime(data[2].dt).substr(0, 5)}`;
+                this.dateDayThree = `${getTime(data[3].dt).substr(0, 5)}`;
+                this.tempDay = data[0].temp.day.toFixed(0);
+                this.tempDayOne = data[1].temp.day.toFixed(0);
+                this.tempDayTwo = data[2].temp.day.toFixed(0);
+                this.tempDayThree = data[3].temp.day.toFixed(0);
+                this.tempNightDayOne = data[1].temp.night.toFixed(0);
+                this.tempNightDayTwo = data[2].temp.night.toFixed(0);
+                this.tempNightDayThree = data[3].temp.night.toFixed(0);
+                this.descriptionDayOne = data[1].weather[0].description;
+                this.descriptionDayTwo = data[2].weather[0].description;
+                this.descriptionDayThree = data[3].weather[0].description;
+                this.srcImageDateOne = `http://openweathermap.org/img/wn/${types[(data[1].weather[0].main).toLowerCase()]}`;
+                this.srcImageDateTwo = `http://openweathermap.org/img/wn/${types[(data[2].weather[0].main).toLowerCase()]}`;
+                this.srcImageDateThree = `http://openweathermap.org/img/wn/${types[(data[3].weather[0].main).toLowerCase()]}`;
                 console.log('Changed')
             }
         }

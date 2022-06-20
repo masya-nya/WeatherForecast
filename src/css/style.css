@@ -183,6 +183,15 @@ body {
   padding: 10px 15px;
   border-radius: 15px;
 }
+.info .src {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: space-between;
+}
+.info .src :not(:last-child) {
+  margin: 0 0 5px 0;
+}
 
 .card {
   margin: 150px 0 0 0;
