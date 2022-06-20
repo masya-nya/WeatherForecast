@@ -39,25 +39,27 @@ async function refresh() {
     Vue.createApp({
         data() {
             return {
-                averageTemp: `${((data[0].temp.day + data[1].temp.day + data[2].temp.day) / 3).toFixed(0)}`,
+                averageTemp: `${((data[1].temp.day + data[2].temp.day + data[3].temp.day) / 3).toFixed(0)}`,
                 date: new Date().toLocaleDateString(),
                 time: new Date().toLocaleTimeString(),
                 feelsLikeDayOne: data[0].feels_like.day.toFixed(0),
-                dateDayOne: `${getTime(data[0].dt).substr(0, 5)}`,
-                dateDayTwo: `${getTime(data[1].dt).substr(0, 5)}`,
-                dateDayThree: `${getTime(data[2].dt).substr(0, 5)}`,
-                tempDayOne: data[0].temp.day.toFixed(0),
-                tempDayTwo: data[1].temp.day.toFixed(0),
-                tempDayThree: data[2].temp.day.toFixed(0),
-                tempNightDayOne: data[0].temp.night.toFixed(0),
-                tempNightDayTwo: data[1].temp.night.toFixed(0),
-                tempNightDayThree: data[2].temp.night.toFixed(0),
-                descriptionDayOne: data[0].weather[0].description,
-                descriptionDayTwo: data[1].weather[0].description,
-                descriptionDayThree: data[2].weather[0].description,
-                srcImageDateOne: `http://openweathermap.org/img/wn/${types[(data[0].weather[0].main).toLowerCase()]}`,
-                srcImageDateTwo: `http://openweathermap.org/img/wn/${types[(data[1].weather[0].main).toLowerCase()]}`,
-                srcImageDateThree: `http://openweathermap.org/img/wn/${types[(data[2].weather[0].main).toLowerCase()]}`
+                dateDayOne: `${getTime(data[1].dt).substr(0, 5)}`,
+                dateDayTwo: `${getTime(data[2].dt).substr(0, 5)}`,
+                dateDayThree: `${getTime(data[3].dt).substr(0, 5)}`,
+                tempDay: data[0].temp.day.toFixed(0),
+                tempDayOne: data[1].temp.day.toFixed(0),
+                tempDayTwo: data[2].temp.day.toFixed(0),
+                tempDayThree: data[3].temp.day.toFixed(0),
+                tempNightDayOne: data[1].temp.night.toFixed(0),
+                tempNightDayTwo: data[2].temp.night.toFixed(0),
+                tempNightDayThree: data[3].temp.night.toFixed(0),
+                descriptionDayOne: data[1].weather[0].description,
+                descriptionDayTwo: data[2].weather[0].description,
+                descriptionDayThree: data[3].weather[0].description,
+                srcImageDateOne: `http://openweathermap.org/img/wn/${types[(data[1].weather[0].main).toLowerCase()]}`,
+                srcImageDateTwo: `http://openweathermap.org/img/wn/${types[(data[2].weather[0].main).toLowerCase()]}`,
+                srcImageDateThree: `http://openweathermap.org/img/wn/${types[(data[3].weather[0].main).toLowerCase()]}`,
+                srcImageDate: `http://openweathermap.org/img/wn/${types[(data[0].weather[0].main).toLowerCase()]}`
             }
         },
         mounted() {
@@ -116,7 +118,7 @@ async function refresh() {
                      `${getTime(historyWeather.dt1)}`, 
                      `${getTime(historyWeather.dt0)}`],
             datasets: [{
-                label: 'Life expectancy',
+                label: 'Средняя температура на день',
                 data: [historyWeather.temp4, 
                        historyWeather.temp3, 
                        historyWeather.temp2, 

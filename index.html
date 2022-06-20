@@ -15,8 +15,8 @@
                 <div class="one-day-forecast__city">Ростов-на-Дону</div>
                 <div class="one-day-forecast__temp">
                     <div class="one-day-forecast__temp-base">
-                        <img v-bind:src="srcImageDateOne" alt="img">
-                        <p>{{ tempDayOne }}&#176;C</p>
+                        <img v-bind:src="srcImageDate" alt="img">
+                        <p>{{ tempDay }}&#176;C</p>
                     </div>
                     <div class="one-day-forecast__temp-add">
                         <p>Ощущается как {{ feelsLikeDayOne }}&#176;C</p>
@@ -65,7 +65,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div>  
             <div class="chart">
                 <canvas id="myChart" width="300" height="200"></canvas>
             </div>
