@@ -80,6 +80,7 @@ async function refresh() {
                     "scattered clouds": '03d.png',
                     "broken clouds": '04d.png',
                     "overcast clouds": '04d.png',
+                    "clouds": '04d.png',
                     "shower rain": '09d.png',
                     "rain": '10d.png',
                     "thunderstorm": '11d.png',
