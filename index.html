@@ -6,10 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="src/css/style.css">
   <title>Погода РНД</title>
+  <style>
+    [v-cloak] {
+        display: none;
+    }
+  </style>
 </head>
 <body>
     <div class="container">
-        <div class="info" id="info">
+        <div class="info" id="info" v-cloak>
             <div class="one-day-forecast">
                 <div class="one-day-forecast__date"> {{ date }}, {{ time }}</div>
                 <div class="one-day-forecast__city">Ростов-на-Дону</div>
